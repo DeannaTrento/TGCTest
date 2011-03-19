@@ -41,8 +41,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;.\lib\freeglut-2.6.0\include&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;FREEGLUT_STATIC;_CRT_SECURE_NO_WARNINGS"
+				AdditionalIncludeDirectories="&quot;.\lib\freeglut-2.6.0\include&quot;;&quot;.\lib\OpenAL 1.1 SDK\include&quot;;&quot;.\lib\freealut-1.1.0-src\include&quot;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;FREEGLUT_STATIC;_CRT_SECURE_NO_WARNINGS;HAVE__STAT;HAVE_BASETSD_H;HAVE_SLEEP;HAVE_WINDOWS_H;ALUT_BUILD_LIBRARY"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -61,7 +61,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="OpenAL32.lib"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;.\lib\OpenAL 1.1 SDK\libs\Win32&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="1"
@@ -293,6 +295,54 @@
 			</File>
 			<File
 				RelativePath=".\lib\freeglut-2.6.0\src\freeglut_window.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="freealut"
+			>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutBufferData.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutCodec.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutError.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutInit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutInputStream.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutInternal.h"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutLoader.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutOutputStream.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutUtil.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutVersion.c"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\freealut-1.1.0-src\src\alutWaveform.c"
 				>
 			</File>
 		</Filter>
